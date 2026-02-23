@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Civic Ledger</title>
+    <!-- Link to the stylesheet that defines the app's visual style -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-container">
+      <header>
+        <h1>Civic Ledger</h1>
+        <p>Track civic tasks that move your community forward.</p>
+      </header>
+
+      <!-- Form for adding a new civic task -->
+      <form id="task-form" class="task-form">
+        <label>
+          Title
+          <input type="text" id="title" name="title" required />
+        </label>
+
+        <label>
+          Why It Matters
+          <textarea id="why" name="why" rows="3" required></textarea>
+        </label>
+
+        <label>
+          Domain
+          <input type="text" id="domain" name="domain" placeholder="Housing, Transit, Schools..." required />
+        </label>
+
+        <label>
+          Start Date
+          <input type="date" id="startDate" name="startDate" required />
+        </label>
+
+        <button type="submit">Add Task</button>
+      </form>
+
+      <section>
+        <h2>Task List</h2>
+        <!-- Container where JavaScript will render tasks dynamically -->
+        <ul id="task-list" class="task-list"></ul>
+      </section>
+    </main>
+
+    <!-- Script that handles app state, rendering, and localStorage persistence -->
+    <script src="script.js"></script>
+  </body>
+</html>
